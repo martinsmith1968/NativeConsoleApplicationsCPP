@@ -1,0 +1,6 @@
+*.hpp
+*.h
+
+**/*
+!.gitignore
+!download/*
