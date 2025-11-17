@@ -83,7 +83,7 @@ public:
            ->transform(CLI::CheckedTransformer(GUIDGenerationModeTypeMap, CLI::ignore_case));
     }
 
-    string FormatGUID(string guidText, int index)
+    [[nodiscard]] string FormatGUID(const string &guidText, const int index) const
     {
         auto value = Format;
         value = Strings::Replace(value, PLACEHOLDER_GUID, FormatGUIDCase(guidText));

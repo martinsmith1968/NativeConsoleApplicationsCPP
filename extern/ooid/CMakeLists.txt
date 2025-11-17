@@ -8,7 +8,7 @@ set(targetDownloadFileName "${targetDownloadDirectory}/${downloadFileVersionName
 set(targetExtractDirectory "${targetDownloadDirectory}/ooid")
 
 file(MAKE_DIRECTORY
-        ${targetDownloadDirectory}
+    ${targetDownloadDirectory}
 )
 
 if(NOT EXISTS "${targetDownloadFileName}")

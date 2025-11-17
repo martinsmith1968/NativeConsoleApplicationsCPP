@@ -21,5 +21,8 @@ target_sources(${PROJECT_NAME} PRIVATE ${resource_files})
 
 target_include_directories (${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
+# TODO: Separate Tests into own Project
+target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_SOURCE_DIR}/extern/gtest/googletest/include/")
+
 # Process Tests
 #add_subdirectory("tests")
