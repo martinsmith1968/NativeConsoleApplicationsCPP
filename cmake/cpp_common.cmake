@@ -121,8 +121,8 @@ macro(SetProjectCompanyName companyName)
 endmacro()
 
 macro(SetProjectCopyright copyright)
-    STRING(TIMESTAMP currentYear "%Y")
-    STRING(REPLACE "{CURRENTYEAR}" "${currentYear}" appCopyright "${copyright}")
+    string(TIMESTAMP currentYear "%Y")
+    string(REPLACE "{CURRENTYEAR}" "${currentYear}" appCopyright "${copyright}")
     set(APP_COPYRIGHT "${appCopyright}")
 endmacro()
 
@@ -178,7 +178,7 @@ macro(BuildBestVersionNumber)
 
     # Set Full Version number
     set(APP_VERSION_FULL "${major}.${minor}.${patch}.${tweak}")
-    STRING(REPLACE "." "," APP_RESOURCE_VERSION_FULL "${APP_VERSION_FULL}")
+    string(REPLACE "." "," APP_RESOURCE_VERSION_FULL "${APP_VERSION_FULL}")
 
     # Set Best Version number
     set(APP_VERSION_BEST "${major}.${minor}")
